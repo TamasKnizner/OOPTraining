@@ -3,7 +3,9 @@ package ooptraining;
 public class DiscountCalculator {
 
 	private final static int SILVER_LIMIT = 19999;
-	private final static int GOLD_LIMIT = 49999;
+	private final static double SILVER_DISCOUNT = 0.8;
+	private final static int GOLD_LIMIT = 49999;	
+	private final static double GOLD_DISCOUNT = 0.7;
 	
 	
 	public static int calculateDiscount(PassangerGroup pg) {
@@ -14,12 +16,12 @@ public class DiscountCalculator {
 		return sum / pg.getPassangers().size();
 	}
 	
-	private static int getPassangerDiscount(Passanger p) {
-		int discount = 0;
+	private static double getPassangerDiscount(Passanger p) {
+		double discount = 1.0;
 		if(p.getMiles() > SILVER_LIMIT) {
-			discount = 2;
+			discount = SILVER_DISCOUNT;
 		} else if(p.getMiles() > GOLD_LIMIT) {
-			discount = 3;
+			discount = GOLD_DISCOUNT;
 		}
 		return discount;
 	}

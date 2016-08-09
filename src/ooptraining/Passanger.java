@@ -4,9 +4,11 @@ public class Passanger {
 	
 	private int miles;
 	private String name;
+	private boolean isBooked;
 	
 	public Passanger(String name) {
 		this.name = name;
+		this.isBooked = false;
 	}
 
 	public String getName() {
@@ -31,6 +33,15 @@ public class Passanger {
 	public int getMiles() {
 		return miles;
 	}
+
+	public boolean isBooked() {
+		return isBooked;
+	}
+
+	public void setBooked(boolean isBooked) {
+		this.isBooked = isBooked;
+	}
+	
 	
 	
 

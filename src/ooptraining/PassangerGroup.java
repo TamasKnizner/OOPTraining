@@ -7,6 +7,7 @@ public class PassangerGroup {
 	
 	private List<Passanger> passangers;
 	
+	
 	public PassangerGroup() {
 		passangers = new ArrayList<Passanger>();
 	}
@@ -30,4 +31,15 @@ public class PassangerGroup {
 		}
 	}*/
 	
+	public void bookAll() {
+		for (Passanger passanger : passangers) {
+			passanger.setBooked(true);
+		}
+	}
+
+	public void unBookAll() {
+		for (Passanger passanger : passangers) {
+			passanger.setBooked(false);
+		}		
+	}
 }
