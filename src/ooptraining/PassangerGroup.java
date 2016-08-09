@@ -3,7 +3,7 @@ package ooptraining;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PassangerGroup implements PassangerInf{
+public class PassangerGroup {
 	
 	private List<Passanger> passangers;
 	
@@ -19,24 +19,15 @@ public class PassangerGroup implements PassangerInf{
 		return passangers;
 	}
 
-	@Override
-	public void pay() {
-		// TODO Auto-generated method stub
-		
+	public int getNumberOfPeople() {
+		return passangers.size();
 	}
-
-	@Override
-	public void book() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void cancel() {
-		// TODO Auto-generated method stub
-		
-	}
-		
 	
+	/*@Override
+	public void pay() {
+		for(Passanger passanger : passangers) {
+			passanger.pay();
+		}
+	}*/
 	
 }

@@ -1,34 +1,36 @@
 package ooptraining;
 
-public class Passanger implements PassangerInf {
+public class Passanger {
 	
-	private boolean isFrequentFlier;
+	private int miles;
+	private String name;
 	
-	public Passanger() {
-		isFrequentFlier = false;
+	public Passanger(String name) {
+		this.name = name;
 	}
-	
 
-	@Override
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setMiles(int miles) {
+		this.miles = miles;
+	}
+
+
+	/*@Override
 	public void pay() {
-		// TODO Auto-generated method stub
 		
-	}
+	}*/
 
-	@Override
-	public void book() {
-		// TODO Auto-generated method stub
-		
+	public int getMiles() {
+		return miles;
 	}
-
-	@Override
-	public void cancel() {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
-	
 	
 	
 
