@@ -10,8 +10,6 @@ public class Trip {
 	private int fullPrice;
 	private String nameOfTrip;
 	
-	
-	
 	public Trip(String nameOfTrip) {
 		super();
 		this.nameOfTrip = nameOfTrip;
@@ -64,9 +62,6 @@ public class Trip {
 		ticket += "Passangers: " + System.lineSeparator();
 		
 		for (PassangerGroup passangerGroup : tripMembers) {
-			/*for (Passanger passanger : passangerGroup.getPassangers()) {
-				ticket += passanger.getName() + System.lineSeparator();
-			}*/
 			ticket += passangerGroup.getPassangerList();
 		}
 		

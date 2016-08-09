@@ -37,6 +37,4 @@ public class Flight {
 		this.distance = distance;
 	}
 	
-	
-	
 }

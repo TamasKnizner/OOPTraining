@@ -39,24 +39,4 @@ public class Itinerary {
 		return flights;
 	}
 	
-	
-	
-	/*
-	public int getProperty(String property) {
-		int v = 0;
-		for (Flight flight : flights) {
-			switch (property) {
-				case "distance":
-					v += flight.getDistance();
-					break;
-				case "price":
-					v += flight.getPrice();
-					break;
-				default:
-					break;
-				}
-			}
-		return v;
-	}*/
-	
 }
