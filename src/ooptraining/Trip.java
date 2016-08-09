@@ -36,11 +36,11 @@ public class Trip {
 	}
 	
 	public void buyTickets() {
-		for(Flight f : itinerary.getFlights()) {
-			for(PassangerGroup pg : tripMembers) {
+		for(PassangerGroup pg : tripMembers) {
+			for(Flight f : itinerary.getFlights()) {
 				fullPrice += f.getPrice() * DiscountCalculator.calculateDiscount(pg);
-				
 			}
+			pg.updateMiles(itinerary.getFullDistance());
 		}
 	}
 	
@@ -64,9 +64,10 @@ public class Trip {
 		ticket += "Passangers: " + System.lineSeparator();
 		
 		for (PassangerGroup passangerGroup : tripMembers) {
-			for (Passanger passanger : passangerGroup.getPassangers()) {
+			/*for (Passanger passanger : passangerGroup.getPassangers()) {
 				ticket += passanger.getName() + System.lineSeparator();
-			}
+			}*/
+			ticket += passangerGroup.getPassangerList();
 		}
 		
 				

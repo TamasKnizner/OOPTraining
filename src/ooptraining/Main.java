@@ -11,11 +11,11 @@ public class Main {
 		itinerary.addFlight(new Flight("Budapest", 10340, 200));
 		itinerary.addFlight(new Flight("London", 13400, 400));
 		itinerary.addFlight(new Flight("Kenya", 132400, 800));
-		itinerary.addFlight(new Flight("Maris Neni", 102340, 4340));
+		itinerary.addFlight(new Flight("Maris Neni", 102340, 78000));
 		tripToNY.setItinerary(itinerary);
 		tripToNY.book(pg);
 		tripToNY.buyTickets();
-		System.out.println(tripToNY.createTicket());
+		System.out.println(tripToNY.createTicket());   
 	}
 
 }

@@ -21,6 +21,7 @@ public class Passanger {
 	}
 
 	public void setMiles(int miles) {
+		System.out.println("Updating miles, current: " + this.miles + " + " + miles);
 		this.miles = miles;
 	}
 

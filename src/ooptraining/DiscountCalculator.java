@@ -8,20 +8,20 @@ public class DiscountCalculator {
 	private final static double GOLD_DISCOUNT = 0.7;
 	
 	
-	public static int calculateDiscount(PassangerGroup pg) {
-		int sum = 0;
+	public static double calculateDiscount(PassangerGroup pg) {
+		double sum = 0;
 		for (Passanger p : pg.getPassangers()) {
 			sum += getPassangerDiscount(p);
 		}
-		return sum / pg.getPassangers().size();
+		return (sum == 0) ? 1.0 : sum / pg.getPassangers().size();
 	}
 	
 	private static double getPassangerDiscount(Passanger p) {
 		double discount = 1.0;
-		if(p.getMiles() > SILVER_LIMIT) {
-			discount = SILVER_DISCOUNT;
-		} else if(p.getMiles() > GOLD_LIMIT) {
+		if(p.getMiles() > GOLD_LIMIT) {
 			discount = GOLD_DISCOUNT;
+		} else if(p.getMiles() > SILVER_LIMIT) {
+			discount = SILVER_DISCOUNT;
 		}
 		return discount;
 	}

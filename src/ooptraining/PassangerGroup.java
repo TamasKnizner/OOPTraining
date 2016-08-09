@@ -31,6 +31,21 @@ public class PassangerGroup {
 		}
 	}*/
 	
+	public void updateMiles(int distance) {
+		for (Passanger passanger : passangers) {
+			System.out.println("asd");
+			passanger.setMiles(passanger.getMiles() + distance);
+		}
+	}
+	
+	public String getPassangerList() {
+		String list = "";
+		for (Passanger passanger : passangers) {
+			list += passanger.getName() + System.lineSeparator();
+		}
+		return list;
+	}
+	
 	public void bookAll() {
 		for (Passanger passanger : passangers) {
 			passanger.setBooked(true);
